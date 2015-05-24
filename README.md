@@ -1,3 +1,10 @@
+# !WARNING!
+This is a **ARM** branch of leveldb with some minor modifications, please read the [README_ARM32.md](./README_ARM32.md) for build instructions.
+
+There are no 32bit specific changes to leveldb but I did want to delineate that the branch is targeting, has been built for, and tested on a 32bit ARM system.
+
+***
+
 **LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.**
 
 Authors: Sanjay Ghemawat (sanjay@google.com) and Jeff Dean (jeff@google.com)
