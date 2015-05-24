@@ -147,6 +147,13 @@ case "$TARGET_OS" in
         PLATFORM_SHARED_CFLAGS=
         PLATFORM_SHARED_VERSIONED=
         ;;
+    OS_LINUX_ARM_CROSSCOMPILE)
+        PLATFORM=OS_LINUX_ARM
+        COMMON_FLAGS="-fno-builtin-memcmp -D_REENTRANT -DOS_LINUX_ARM -DLEVELDB_PLATFORM_POSIX"
+        PLATFORM_LDFLAGS="-pthread -lrt"
+        PORT_FILE=port/port_posix.cc
+        CROSS_COMPILE=true
+        ;;
     *)
         echo "Unknown platform!" >&2
         exit 1
